@@ -1,8 +1,8 @@
 <?php
 
-namespace Reedware\LaravelSMS\Tests;
+namespace Halo\LaravelSMS\Tests;
 
-use Reedware\LaravelSMS\Textable;
+use Halo\LaravelSMS\Textable;
 
 class SMSTextableTest extends TestCase
 {

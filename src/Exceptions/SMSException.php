@@ -1,6 +1,6 @@
 <?php
 
-namespace Reedware\LaravelSMS\Exceptions;
+namespace Halo\LaravelSMS\Exceptions;
 
 use Exception;
 

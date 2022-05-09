@@ -1,16 +1,16 @@
 <?php
 
-namespace Reedware\LaravelSMS\Transport;
+namespace Halo\LaravelSMS\Transport;
 
-use Reedware\LaravelSMS\Contracts\Message as MessageContract;
-use Reedware\LaravelSMS\Contracts\Transport as TransportContract;
+use Halo\LaravelSMS\Contracts\Message as MessageContract;
+use Halo\LaravelSMS\Contracts\Transport as TransportContract;
 
 abstract class Transport implements TransportContract
 {
     /**
      * Returns the number of recipients.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Message  $message
+     * @param  \Halo\LaravelSMS\Contracts\Message  $message
      *
      * @return integer
      */

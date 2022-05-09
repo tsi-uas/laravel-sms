@@ -1,17 +1,17 @@
 <?php
 
-namespace Reedware\LaravelSMS\Tests;
+namespace Halo\LaravelSMS\Tests;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Contracts\View\Factory as ViewFactory;
 use Illuminate\Foundation\Application;
-use Reedware\LaravelSMS\Provider;
-use Reedware\LaravelSMS\SendQueuedTextable;
+use Halo\LaravelSMS\Provider;
+use Halo\LaravelSMS\SendQueuedTextable;
 use Illuminate\Support\Testing\Fakes\QueueFake;
 use Mockery as m;
-use Reedware\LaravelSMS\Contracts\Transport;
-use Reedware\LaravelSMS\Textable;
+use Halo\LaravelSMS\Contracts\Transport;
+use Halo\LaravelSMS\Textable;
 
 class TextableQueuedTest extends TestCase
 {

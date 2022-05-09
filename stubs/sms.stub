@@ -5,7 +5,7 @@ namespace DummyNamespace;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\SerializesModels;
-use Reedware\LaravelSMS\Textable;
+use Halo\LaravelSMS\Textable;
 
 class DummyClass extends Textable
 {

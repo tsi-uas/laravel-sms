@@ -1,6 +1,6 @@
 <?php
 
-namespace Reedware\LaravelSMS;
+namespace Halo\LaravelSMS;
 
 use Illuminate\Container\Container;
 use Illuminate\Contracts\Filesystem\Factory as FilesystemFactory;
@@ -10,8 +10,8 @@ use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Illuminate\Support\Traits\ForwardsCalls;
 use Illuminate\Support\Traits\Localizable;
-use Reedware\LaravelSMS\Contracts\Factory as FactoryContract;
-use Reedware\LaravelSMS\Contracts\Textable as TextableContract;
+use Halo\LaravelSMS\Contracts\Factory as FactoryContract;
+use Halo\LaravelSMS\Contracts\Textable as TextableContract;
 use ReflectionClass;
 use ReflectionProperty;
 
@@ -85,7 +85,7 @@ class Textable implements TextableContract, Renderable
     /**
      * Sends the message using the given sms provider.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Factory|\Reedware\LaravelSMS\Contracts\Provider  $provider
+     * @param  \Halo\LaravelSMS\Contracts\Factory|\Halo\LaravelSMS\Contracts\Provider  $provider
      *
      * @return void
      */
@@ -218,7 +218,7 @@ class Textable implements TextableContract, Renderable
     /**
      * Adds the sender to the message.
      *
-     * @param  \Reedware\LaravelSMS\Message  $message
+     * @param  \Halo\LaravelSMS\Message  $message
      *
      * @return $this
      */
@@ -234,7 +234,7 @@ class Textable implements TextableContract, Renderable
     /**
      * Adds all of the recipients to the message.
      *
-     * @param  \Reedware\LaravelSMS\Message  $message
+     * @param  \Halo\LaravelSMS\Message  $message
      *
      * @return $this
      */
@@ -250,7 +250,7 @@ class Textable implements TextableContract, Renderable
     /**
      * Runs the callbacks for the message.
      *
-     * @param  \Reedware\LaravelSMS\Message  $message
+     * @param  \Halo\LaravelSMS\Message  $message
      *
      * @return $this
      */

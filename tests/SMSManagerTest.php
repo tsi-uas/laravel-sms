@@ -1,6 +1,6 @@
 <?php
 
-namespace Reedware\LaravelSMS\Tests;
+namespace Halo\LaravelSMS\Tests;
 
 use InvalidArgumentException;
 

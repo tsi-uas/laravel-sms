@@ -1,13 +1,13 @@
 <?php
 
-namespace Reedware\LaravelSMS\Contracts;
+namespace Halo\LaravelSMS\Contracts;
 
 interface Transport
 {
     /**
      * Sends the given message; returns the number of recipients who were accepted for delivery.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Message  $message
+     * @param  \Halo\LaravelSMS\Contracts\Message  $message
      * @param  string[]                                $failedRecipients
      *
      * @return int

@@ -1,21 +1,21 @@
 <?php
 
-namespace Reedware\LaravelSMS;
+namespace Halo\LaravelSMS;
 
+use Throwable;
+use InvalidArgumentException;
+use Halo\LaravelSMS\Events\MessageSent;
+use Illuminate\Support\Traits\Macroable;
+use Halo\LaravelSMS\Events\MessageFailed;
+use Halo\LaravelSMS\Events\MessageSending;
 use Illuminate\Contracts\Events\Dispatcher;
-use Illuminate\Contracts\Queue\Factory as QueueContract;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Contracts\View\Factory as ViewFactory;
-use Illuminate\Support\Traits\Macroable;
-use InvalidArgumentException;
-use Reedware\LaravelSMS\Contracts\MessageQueue as MessageQueueContract;
-use Reedware\LaravelSMS\Contracts\Provider as ProviderContract;
-use Reedware\LaravelSMS\Contracts\Textable as TextableContract;
-use Reedware\LaravelSMS\Contracts\Transport as TransportContract;
-use Reedware\LaravelSMS\Events\MessageSending;
-use Reedware\LaravelSMS\Events\MessageFailed;
-use Reedware\LaravelSMS\Events\MessageSent;
-use Throwable;
+use Illuminate\Contracts\Queue\Factory as QueueContract;
+use Halo\LaravelSMS\Contracts\Provider as ProviderContract;
+use Halo\LaravelSMS\Contracts\Textable as TextableContract;
+use Halo\LaravelSMS\Contracts\Transport as TransportContract;
+use Halo\LaravelSMS\Contracts\MessageQueue as MessageQueueContract;
 
 class Provider implements ProviderContract, MessageQueueContract
 {
@@ -38,7 +38,7 @@ class Provider implements ProviderContract, MessageQueueContract
     /**
      * The sms transport instance.
      *
-     * @var \Reedware\LaravelSMS\Contracts\Transport
+     * @var \Halo\LaravelSMS\Contracts\Transport
      */
     protected $transport;
 
@@ -82,7 +82,7 @@ class Provider implements ProviderContract, MessageQueueContract
      *
      * @param  string  $name
      * @param  \Illuminate\Contracts\View\Factory  $views
-     * @param  \Reedware\LaravelSMS\Contracts\Transport  $transport
+     * @param  \Halo\LaravelSMS\Contracts\Transport  $transport
      * @param  \Illuminate\Contracts\Events\Dispatcher|null  $events
      * @return void
      */
@@ -125,7 +125,7 @@ class Provider implements ProviderContract, MessageQueueContract
      *
      * @param  mixed  $users
      *
-     * @return \Reedware\LaravelSMS\PendingMessage
+     * @return \Halo\LaravelSMS\PendingMessage
      */
     public function to($users)
     {
@@ -168,7 +168,7 @@ class Provider implements ProviderContract, MessageQueueContract
     /**
      * Send a new message using a view.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Textable|string|array  $view
+     * @param  \Halo\LaravelSMS\Contracts\Textable|string|array  $view
      * @param  array                                                 $data
      * @param  \Closure|string|null                                  $callback
      *
@@ -223,7 +223,7 @@ class Provider implements ProviderContract, MessageQueueContract
     /**
      * Sends the given textable.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Textable  $textable
+     * @param  \Halo\LaravelSMS\Contracts\Textable  $textable
      *
      * @return mixed
      */
@@ -272,7 +272,7 @@ class Provider implements ProviderContract, MessageQueueContract
     /**
      * Add the content to a given message.
      *
-     * @param  \Reedware\LaravelSMS\Message  $message
+     * @param  \Halo\LaravelSMS\Message  $message
      * @param  string                        $view
      * @param  string                        $raw
      * @param  array                         $data
@@ -304,7 +304,7 @@ class Provider implements ProviderContract, MessageQueueContract
     /**
      * Sets the global "to" address on the given message.
      *
-     * @param  \Reedware\LaravelSMS\Message  $message
+     * @param  \Halo\LaravelSMS\Message  $message
      *
      * @return void
      */
@@ -316,7 +316,7 @@ class Provider implements ProviderContract, MessageQueueContract
     /**
      * Queues a new e-mail message for sending.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Textable  $view
+     * @param  \Halo\LaravelSMS\Contracts\Textable  $view
      * @param  string|null                              $queue
      *
      * @return mixed
@@ -340,7 +340,7 @@ class Provider implements ProviderContract, MessageQueueContract
      * Queue a new e-mail message for sending on the given queue.
      *
      * @param  string  $queue
-     * @param  \Reedware\LaravelSMS\Contracts\Textable  $view
+     * @param  \Halo\LaravelSMS\Contracts\Textable  $view
      * @return mixed
      */
     public function onQueue($queue, $view)
@@ -352,7 +352,7 @@ class Provider implements ProviderContract, MessageQueueContract
      * Queue a new e-mail message for sending after (n) seconds.
      *
      * @param  \DateTimeInterface|\DateInterval|int     $delay
-     * @param  \Reedware\LaravelSMS\Contracts\Textable  $view
+     * @param  \Halo\LaravelSMS\Contracts\Textable  $view
      * @param  string|null                              $queue
      *
      * @return mixed
@@ -375,7 +375,7 @@ class Provider implements ProviderContract, MessageQueueContract
      *
      * @param  string  $queue
      * @param  \DateTimeInterface|\DateInterval|int  $delay
-     * @param  \Reedware\LaravelSMS\Contracts\Textable  $view
+     * @param  \Halo\LaravelSMS\Contracts\Textable  $view
      * @return mixed
      */
     public function laterOn($queue, $delay, $view)
@@ -386,7 +386,7 @@ class Provider implements ProviderContract, MessageQueueContract
     /**
      * Creates and returns a new message instance.
      *
-     * @return \Reedware\LaravelSMS\Message
+     * @return \Halo\LaravelSMS\Message
      */
     protected function createMessage()
     {
@@ -402,7 +402,7 @@ class Provider implements ProviderContract, MessageQueueContract
     /**
      * Sends the specified message instance.
      *
-     * @param  Reedware\LaravelSMS\Message  $message
+     * @param  Halo\LaravelSMS\Message  $message
      *
      * @return integer
      */
@@ -416,7 +416,7 @@ class Provider implements ProviderContract, MessageQueueContract
     /**
      * Returns whether or not specified the message can be sent.
      *
-     * @param  \Reedware\LaravelSMS\Message  $message
+     * @param  \Halo\LaravelSMS\Message  $message
      * @param  array                         $data
      *
      * @return boolean
@@ -435,7 +435,7 @@ class Provider implements ProviderContract, MessageQueueContract
     /**
      * Dispatches the message sent event.
      *
-     * @param  \Reedware\LaravelSMS\Message  $message
+     * @param  \Halo\LaravelSMS\Message  $message
      * @param  array                         $data
      *
      * @return void
@@ -454,13 +454,13 @@ class Provider implements ProviderContract, MessageQueueContract
     /**
      * Dispatches the message failed event.
      *
-     * @param  \Reedware\LaravelSMS\Message  $message
+     * @param  \Halo\LaravelSMS\Message  $message
      * @param  array                         $data
      * @param  \Throwable                    $exception
      *
      * @return void
      *
-     * @throws \Reedware\LaravelSMS\Exceptions\SMSException
+     * @throws \Halo\LaravelSMS\Exceptions\SMSException
      */
     protected function dispatchFailedEvent($message, $data, Throwable $exception)
     {
@@ -492,7 +492,7 @@ class Provider implements ProviderContract, MessageQueueContract
     /**
      * Returns the sms transport instance.
      *
-     * @return \Reedware\LaravelSMS\Contracts\Transport
+     * @return \Halo\LaravelSMS\Contracts\Transport
      */
     public function getTransport()
     {
@@ -512,7 +512,7 @@ class Provider implements ProviderContract, MessageQueueContract
     /**
      * Sets the sms transport instance.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Transport  $transport
+     * @param  \Halo\LaravelSMS\Contracts\Transport  $transport
      *
      * @return void
      */

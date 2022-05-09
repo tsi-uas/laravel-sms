@@ -1,6 +1,6 @@
 <?php
 
-namespace Reedware\LaravelSMS\Console;
+namespace Halo\LaravelSMS\Console;
 
 use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;

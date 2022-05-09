@@ -1,10 +1,10 @@
 <?php
 
-namespace Reedware\LaravelSMS\Transport;
+namespace Halo\LaravelSMS\Transport;
 
 use InvalidArgumentException;
 use Illuminate\Contracts\Mail\Mailer as MailerContract;
-use Reedware\LaravelSMS\Contracts\Message as MessageContract;
+use Halo\LaravelSMS\Contracts\Message as MessageContract;
 
 class EmailTransport extends Transport
 {
@@ -38,7 +38,7 @@ class EmailTransport extends Transport
     /**
      * Sends the given message; returns the number of recipients who were accepted for delivery.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Message  $message
+     * @param  \Halo\LaravelSMS\Contracts\Message  $message
      * @param  string[]                                $failedRecipients
      *
      * @return int
@@ -56,7 +56,7 @@ class EmailTransport extends Transport
      * Builds the email message object.
      *
      * @param  \Illuminate\Mail\Message                $email
-     * @param  \Reedware\LaravelSMS\Contracts\Message  $message
+     * @param  \Halo\LaravelSMS\Contracts\Message  $message
      *
      * @return string
      */
@@ -77,7 +77,7 @@ class EmailTransport extends Transport
      * Builds the email address of a number.
      *
      * @param  array                                   $recipient
-     * @param  \Reedware\LaravelSMS\Contracts\Message  $message
+     * @param  \Halo\LaravelSMS\Contracts\Message  $message
      *
      * @return string
      */

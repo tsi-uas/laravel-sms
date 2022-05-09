@@ -51,7 +51,7 @@ return [
         ],
 
         'twilio' => [
-            'transport' => 'twilio', // requires "reedware/laravel-sms-twilio"
+            'transport' => 'twilio', // requires "halo/laravel-sms-twilio"
             'account_sid' => env('TWILIO_SID'),
             'auth_token' => env('TWILIO_TOKEN')
         ]

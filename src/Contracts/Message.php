@@ -1,6 +1,6 @@
 <?php
 
-namespace Reedware\LaravelSMS\Contracts;
+namespace Halo\LaravelSMS\Contracts;
 
 interface Message
 {

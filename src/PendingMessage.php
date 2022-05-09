@@ -1,17 +1,17 @@
 <?php
 
-namespace Reedware\LaravelSMS;
+namespace Halo\LaravelSMS;
 
 use Illuminate\Contracts\Translation\HasLocalePreference;
-use Reedware\LaravelSMS\Contracts\Provider as ProviderContract;
-use Reedware\LaravelSMS\Contracts\Textable as TextableContract;
+use Halo\LaravelSMS\Contracts\Provider as ProviderContract;
+use Halo\LaravelSMS\Contracts\Textable as TextableContract;
 
 class PendingMessage
 {
     /**
      * The sms provider instance.
      *
-     * @var \Reedware\LaravelSMS\Contracts\Provider
+     * @var \Halo\LaravelSMS\Contracts\Provider
      */
     protected $provider;
 
@@ -46,7 +46,7 @@ class PendingMessage
     /**
      * Create a new pending sms message instance.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Provider  $provider
+     * @param  \Halo\LaravelSMS\Contracts\Provider  $provider
      *
      * @return void
      */
@@ -90,7 +90,7 @@ class PendingMessage
     /**
      * Send a new textable message instance.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Textable  $textable
+     * @param  \Halo\LaravelSMS\Contracts\Textable  $textable
      *
      * @return mixed
      */
@@ -102,7 +102,7 @@ class PendingMessage
     /**
      * Push the given textable onto the queue.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Textable  $textable
+     * @param  \Halo\LaravelSMS\Contracts\Textable  $textable
      *
      * @return mixed
      */
@@ -115,7 +115,7 @@ class PendingMessage
      * Deliver the queued message after the given delay.
      *
      * @param  \DateTimeInterface|\DateInterval|int     $delay
-     * @param  \Reedware\LaravelSMS\Contracts\Textable  $textable
+     * @param  \Halo\LaravelSMS\Contracts\Textable  $textable
      *
      * @return mixed
      */
@@ -127,7 +127,7 @@ class PendingMessage
     /**
      * Populate the textable with the addresses.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Textable  $textable
+     * @param  \Halo\LaravelSMS\Contracts\Textable  $textable
      *
      * @return \Illuminate\Mail\Mailable
      */

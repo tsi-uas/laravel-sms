@@ -1,6 +1,6 @@
 <?php
 
-namespace Reedware\LaravelSMS\Contracts;
+namespace Halo\LaravelSMS\Contracts;
 
 use Illuminate\Contracts\Queue\Factory as Queue;
 
@@ -9,7 +9,7 @@ interface Textable
     /**
      * Sends the message using the given sms provider.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Factory|\Reedware\LaravelSMS\Contracts\Provider  $provider
+     * @param  \Halo\LaravelSMS\Contracts\Factory|\Halo\LaravelSMS\Contracts\Provider  $provider
      *
      * @return void
      */

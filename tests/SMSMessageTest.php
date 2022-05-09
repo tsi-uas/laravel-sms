@@ -1,13 +1,13 @@
 <?php
 
-namespace Reedware\LaravelSMS\Tests;
+namespace Halo\LaravelSMS\Tests;
 
-use Reedware\LaravelSMS\Message;
+use Halo\LaravelSMS\Message;
 
 class SMSMessageTest extends TestCase
 {
     /**
-     * @var \Reedware\LaravelSMS\Message
+     * @var \Halo\LaravelSMS\Message
      */
     protected $message;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Reedware\LaravelSMS\Transport;
+namespace Halo\LaravelSMS\Transport;
 
 use Psr\Log\LoggerInterface;
-use Reedware\LaravelSMS\Contracts\Message as MessageContract;
+use Halo\LaravelSMS\Contracts\Message as MessageContract;
 
 class LogTransport extends Transport
 {
@@ -29,7 +29,7 @@ class LogTransport extends Transport
     /**
      * Sends the given message; returns the number of recipients who were accepted for delivery.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Message  $message
+     * @param  \Halo\LaravelSMS\Contracts\Message  $message
      * @param  string[]                                $failedRecipients
      *
      * @return int
@@ -44,7 +44,7 @@ class LogTransport extends Transport
     /**
      * Returns a loggable string out of a message entity.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Message  $message
+     * @param  \Halo\LaravelSMS\Contracts\Message  $message
      *
      * @return string
      */

@@ -1,14 +1,14 @@
 <?php
 
-namespace Reedware\LaravelSMS;
+namespace Halo\LaravelSMS;
 
 use Illuminate\Contracts\Mail\Mailer as MailerContract;
 use Illuminate\Log\LogManager;
 use InvalidArgumentException;
 use Psr\Log\LoggerInterface;
-use Reedware\LaravelSMS\Transport\ArrayTransport;
-use Reedware\LaravelSMS\Transport\EmailTransport;
-use Reedware\LaravelSMS\Transport\LogTransport;
+use Halo\LaravelSMS\Transport\ArrayTransport;
+use Halo\LaravelSMS\Transport\EmailTransport;
+use Halo\LaravelSMS\Transport\LogTransport;
 
 trait CreatesTransports
 {
@@ -18,7 +18,7 @@ trait CreatesTransports
      * @param  string  $name
      * @param  array   $config
      *
-     * @return \Reedware\LaravelSMS\Contracts\Transport
+     * @return \Halo\LaravelSMS\Contracts\Transport
      */
     public function createTransport($name, array $config)
     {
@@ -38,7 +38,7 @@ trait CreatesTransports
     /**
      * Creates an instance of the array sms transport driver.
      *
-     * @return \Reedware\LaravelSMS\Transport\ArrayTransport
+     * @return \Halo\LaravelSMS\Transport\ArrayTransport
      */
     protected function createArrayTransport()
     {
@@ -51,7 +51,7 @@ trait CreatesTransports
      * @param  string  $name
      * @param  array   $config
      *
-     * @return \Reedware\LaravelSMS\Transport\EmailTransport
+     * @return \Halo\LaravelSMS\Transport\EmailTransport
      */
     protected function createEmailTransport($name, array $config)
     {
@@ -66,7 +66,7 @@ trait CreatesTransports
      * @param  string  $name
      * @param  array   $config
      *
-     * @return \Reedware\LaravelSMS\Transport\LogTransport
+     * @return \Halo\LaravelSMS\Transport\LogTransport
      */
     protected function createLogTransport($name, array $config)
     {

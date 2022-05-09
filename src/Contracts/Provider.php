@@ -1,6 +1,6 @@
 <?php
 
-namespace Reedware\LaravelSMS\Contracts;
+namespace Halo\LaravelSMS\Contracts;
 
 interface Provider
 {
@@ -9,7 +9,7 @@ interface Provider
      *
      * @param  mixed  $users
      *
-     * @return \Reedware\LaravelSMS\PendingMessage
+     * @return \Halo\LaravelSMS\PendingMessage
      */
     public function to($users);
 

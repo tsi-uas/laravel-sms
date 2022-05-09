@@ -1,14 +1,14 @@
 <?php
 
-namespace Reedware\LaravelSMS;
+namespace Halo\LaravelSMS;
 
 use Closure;
 use InvalidArgumentException;
-use Reedware\LaravelSMS\Events\ManagerBooted;
-use Reedware\LaravelSMS\Contracts\Factory as FactoryContract;
+use Halo\LaravelSMS\Events\ManagerBooted;
+use Halo\LaravelSMS\Contracts\Factory as FactoryContract;
 
 /**
- * @mixin \Reedware\LaravelSMS\Provider
+ * @mixin \Halo\LaravelSMS\Provider
  */
 class SMSManager implements FactoryContract
 {
@@ -64,7 +64,7 @@ class SMSManager implements FactoryContract
      *
      * @param  string|null  $name
      *
-     * @return \Reedware\LaravelSMS\Provider
+     * @return \Halo\LaravelSMS\Provider
      */
     public function driver($name = null)
     {
@@ -78,7 +78,7 @@ class SMSManager implements FactoryContract
      *
      * @param  string|null  $name
      *
-     * @return \Reedware\LaravelSMS\Provider
+     * @return \Halo\LaravelSMS\Provider
      */
     public function provider($name = null)
     {
@@ -90,7 +90,7 @@ class SMSManager implements FactoryContract
      *
      * @param  string  $name
      *
-     * @return \Reedware\LaravelSMS\Provider
+     * @return \Halo\LaravelSMS\Provider
      */
     protected function get($name)
     {
@@ -102,7 +102,7 @@ class SMSManager implements FactoryContract
      *
      * @param  string  $name
      *
-     * @return \Reedware\LaravelSMS\Contracts\Provider
+     * @return \Halo\LaravelSMS\Contracts\Provider
      *
      * @throws \InvalidArgumentException
      */
@@ -135,7 +135,7 @@ class SMSManager implements FactoryContract
     /**
      * Sets the global address on the provider by type.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Provider  $provider
+     * @param  \Halo\LaravelSMS\Contracts\Provider  $provider
      * @param  array                                    $config
      * @param  string                                   $type
      *

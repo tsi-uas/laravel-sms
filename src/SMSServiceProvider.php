@@ -1,13 +1,13 @@
 <?php
 
-namespace Reedware\LaravelSMS;
+namespace Halo\LaravelSMS;
 
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
-use Reedware\LaravelSMS\Console\SMSMakeCommand;
-use Reedware\LaravelSMS\Contracts\Factory as FactoryContract;
-use Reedware\LaravelSMS\Contracts\MessageQueue as MessageQueueContract;
-use Reedware\LaravelSMS\Contracts\Provider as ProviderContract;
+use Halo\LaravelSMS\Console\SMSMakeCommand;
+use Halo\LaravelSMS\Contracts\Factory as FactoryContract;
+use Halo\LaravelSMS\Contracts\MessageQueue as MessageQueueContract;
+use Halo\LaravelSMS\Contracts\Provider as ProviderContract;
 
 class SMSServiceProvider extends ServiceProvider implements DeferrableProvider
 {

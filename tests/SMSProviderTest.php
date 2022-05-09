@@ -1,16 +1,16 @@
 <?php
 
-namespace Reedware\LaravelSMS\Tests;
+namespace Halo\LaravelSMS\Tests;
 
 use Illuminate\Contracts\Events\Dispatcher;
 use Illuminate\Contracts\View\Factory as ViewFactory;
-use Reedware\LaravelSMS\Events\MessageSending;
-use Reedware\LaravelSMS\Events\MessageSent;
+use Halo\LaravelSMS\Events\MessageSending;
+use Halo\LaravelSMS\Events\MessageSent;
 use Mockery as m;
 use PHPUnit\Framework\TestCase;
-use Reedware\LaravelSMS\Contracts\Transport as TransportContract;
-use Reedware\LaravelSMS\Message;
-use Reedware\LaravelSMS\Provider;
+use Halo\LaravelSMS\Contracts\Transport as TransportContract;
+use Halo\LaravelSMS\Message;
+use Halo\LaravelSMS\Provider;
 use stdClass;
 
 class SMSProviderTest extends TestCase

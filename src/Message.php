@@ -1,8 +1,8 @@
 <?php
 
-namespace Reedware\LaravelSMS;
+namespace Halo\LaravelSMS;
 
-use Reedware\LaravelSMS\Contracts\Message as MessageContract;
+use Halo\LaravelSMS\Contracts\Message as MessageContract;
 
 class Message implements MessageContract
 {

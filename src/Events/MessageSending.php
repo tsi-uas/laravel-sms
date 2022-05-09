@@ -1,13 +1,13 @@
 <?php
 
-namespace Reedware\LaravelSMS\Events;
+namespace Halo\LaravelSMS\Events;
 
 class MessageSending
 {
     /**
      * The sms message instance.
      *
-     * @var \Reedware\LaravelSMS\Contracts\Message
+     * @var \Halo\LaravelSMS\Contracts\Message
      */
     public $message;
 
@@ -21,7 +21,7 @@ class MessageSending
     /**
      * Create a new event instance.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Message  $message
+     * @param  \Halo\LaravelSMS\Contracts\Message  $message
      * @param  array                                   $data
      *
      * @return void

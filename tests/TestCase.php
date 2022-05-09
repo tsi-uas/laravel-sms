@@ -1,6 +1,6 @@
 <?php
 
-namespace Reedware\LaravelSMS\Tests;
+namespace Halo\LaravelSMS\Tests;
 
 use Orchestra\Testbench\TestCase as BaseTestCase;
 
@@ -16,7 +16,7 @@ abstract class TestCase extends BaseTestCase
     protected function getPackageProviders($app)
     {
         return [
-            \Reedware\LaravelSMS\SMSServiceProvider::class
+            \Halo\LaravelSMS\SMSServiceProvider::class
         ];
     }
 }

@@ -1,16 +1,16 @@
 <?php
 
-namespace Reedware\LaravelSMS;
+namespace Halo\LaravelSMS;
 
-use Reedware\LaravelSMS\Contracts\Factory as FactoryContract;
-use Reedware\LaravelSMS\Contracts\Textable as TextableContract;
+use Halo\LaravelSMS\Contracts\Factory as FactoryContract;
+use Halo\LaravelSMS\Contracts\Textable as TextableContract;
 
 class SendQueuedTextable
 {
     /**
      * The textable message instance.
      *
-     * @var \Reedware\LaravelSMS\Contracts\Textable
+     * @var \Halo\LaravelSMS\Contracts\Textable
      */
     public $textable;
 
@@ -31,7 +31,7 @@ class SendQueuedTextable
     /**
      * Create a new job instance.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Textable  $textable
+     * @param  \Halo\LaravelSMS\Contracts\Textable  $textable
      *
      * @return void
      */
@@ -45,7 +45,7 @@ class SendQueuedTextable
     /**
      * Handles the queued job.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Factory  $factory
+     * @param  \Halo\LaravelSMS\Contracts\Factory  $factory
      *
      * @return void
      */

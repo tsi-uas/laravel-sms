@@ -1,22 +1,22 @@
 <?php
 
-namespace Reedware\LaravelSMS\Events;
+namespace Halo\LaravelSMS\Events;
 
-use Reedware\LaravelSMS\Contracts\Factory as Manager;
+use Halo\LaravelSMS\Contracts\Factory as Manager;
 
 class ManagerBooted
 {
     /**
      * The sms message instance.
      *
-     * @var \Reedware\LaravelSMS\Contracts\Factory
+     * @var \Halo\LaravelSMS\Contracts\Factory
      */
     public $manager;
 
     /**
      * Create a new event instance.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Message  $message
+     * @param  \Halo\LaravelSMS\Contracts\Message  $message
      *
      * @return void
      */

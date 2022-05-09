@@ -1,6 +1,6 @@
 <?php
 
-namespace Reedware\LaravelSMS\Events;
+namespace Halo\LaravelSMS\Events;
 
 use Throwable;
 
@@ -9,7 +9,7 @@ class MessageFailed
     /**
      * The sms message instance.
      *
-     * @var \Reedware\LaravelSMS\Contracts\Message
+     * @var \Halo\LaravelSMS\Contracts\Message
      */
     public $message;
 
@@ -30,7 +30,7 @@ class MessageFailed
     /**
      * Create a new event instance.
      *
-     * @param  \Reedware\LaravelSMS\Contracts\Message  $message
+     * @param  \Halo\LaravelSMS\Contracts\Message  $message
      * @param  array                                   $data
      * @param  \Throwable                              $exception
      *

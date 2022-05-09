@@ -1,6 +1,6 @@
 <?php
 
-namespace Reedware\LaravelSMS\Contracts;
+namespace Halo\LaravelSMS\Contracts;
 
 use Closure;
 
@@ -11,7 +11,7 @@ interface Factory
      *
      * @param  string|null  $name
      *
-     * @return \Reedware\LaravelSMS\Provider
+     * @return \Halo\LaravelSMS\Provider
      */
     public function provider($name = null);
 

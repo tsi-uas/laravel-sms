@@ -1,11 +1,11 @@
 <?php
 
-namespace Reedware\LaravelSMS;
+namespace Halo\LaravelSMS;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Reedware\LaravelSMS\SMSProvider
+ * @see \Halo\LaravelSMS\SMSProvider
  */
 class SMS extends Facade
 {

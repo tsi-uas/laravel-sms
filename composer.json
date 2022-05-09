@@ -1,5 +1,5 @@
 {
-    "name": "reedware/laravel-sms",
+    "name": "halo/laravel-sms",
     "description": "Adds the ability to send text messages through various drivers.",
     "keywords": ["laravel", "sms"],
     "license": "MIT",
@@ -22,21 +22,21 @@
     },
     "autoload": {
         "psr-4": {
-            "Reedware\\LaravelSMS\\": "src/"
+            "Halo\\LaravelSMS\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Reedware\\LaravelSMS\\Tests\\": "tests/"
+            "Halo\\LaravelSMS\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Reedware\\LaravelSMS\\SMSServiceProvider"
+                "Halo\\LaravelSMS\\SMSServiceProvider"
             ],
             "aliases": {
-                "SMS": "Reedware\\LaravelSMS\\SMS"
+                "SMS": "Halo\\LaravelSMS\\SMS"
             }
         }
     }
